@@ -1,0 +1,33 @@
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.box-1 > li {
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 1s, opacity 1s;
+    opacity: 0;
+}
+
+.box-1 > li:nth-child(1) {
+    transform: translateX(-100%);
+}
+
+.box-1 > li:nth-child(2) {
+    transform: translateY(-100%);
+}
+
+.box-1 > li:nth-child(3) {
+    transform: translateX(100%);
+}
+
+.box-1 > li.active {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+}
